@@ -6,7 +6,7 @@ data "aws_ami" "CentOs" {
   most_recent = true
 
   filter {
-    name   = "AMI Name"
+    name   = "AMI-Name"
     values = ["CentOS Linux 7 x86_64 HVM EBS ENA 2002_01-b7ee8a69-ee97-4a49-9e68-afaee216db2e-ami-0042af67f8e4dcc20.4"]
   }
 
