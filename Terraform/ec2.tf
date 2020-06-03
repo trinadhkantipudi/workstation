@@ -19,7 +19,7 @@ data "aws_ami" "CentOs" {
 }
 
 resource "aws_instance" "practice" {
-  ami           = "{ami-01e36b7901e884a10}"
+  ami           = data.aws_ami.CentOs.image_id
   instance_type = "t2.micro"
 
   tags = {
