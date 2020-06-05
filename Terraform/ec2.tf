@@ -8,6 +8,17 @@ resource "aws_instance" "practice" {
   tags = {
     Name = "practice"
   }
+
+  provisioner "remote-exec" {
+    connection {
+      type = "ssh"
+      user = "centos"
+    }
+    inline = [
+      "sudo yum install ansible -y"
+      
+    ]
+  }
 }
 data "aws_ami" "CentOs" {
   most_recent = true
