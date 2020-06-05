@@ -13,10 +13,11 @@ resource "aws_instance" "practice" {
     connection {
       type = "ssh"
       user = "centos"
+      host = "self.private_ip"
     }
     inline = [
       "sudo yum install ansible -y"
-      
+
     ]
   }
 }
