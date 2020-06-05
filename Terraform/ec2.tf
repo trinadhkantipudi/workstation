@@ -14,6 +14,7 @@ resource "aws_instance" "practice" {
       type = "ssh"
       user = "centos"
       host = "self.private_ip"
+      private_key = file("/home/centos/.ssh/id_rsa")
     }
     inline = [
       "sudo yum install ansible -y"
