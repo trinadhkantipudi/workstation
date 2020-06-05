@@ -4,6 +4,7 @@ provider "aws" {
 resource "aws_instance" "practice" {
   ami           = data.aws_ami.CentOs.image_id
   instance_type = "t2.micro"
+  key_name = "PractiseKeypair"
   security_groups = [data.aws_security_group.sg.name]
   tags = {
     Name = "practice"
