@@ -14,7 +14,7 @@ resource "aws_instance" "practice" {
     connection {
       type = "ssh"
       user = "centos"
-      host = "self.private_ip"
+      host = self.private_ip
       private_key = file("/home/centos/.ssh/id_rsa")
     }
     inline = [
