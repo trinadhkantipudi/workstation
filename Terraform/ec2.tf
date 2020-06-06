@@ -19,7 +19,7 @@ resource "aws_instance" "practice" {
     }
     inline = [
       "sudo yum install epel-release -y",
-      "sudo yum install ansible -y"
+      "sudo yum install ansible -y",
       "ansible pull -U https://github.com/naveenthangella/Practice/blob/master/Ansible/playbooks/main.yml"
 
     ]
