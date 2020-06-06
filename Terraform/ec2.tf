@@ -22,7 +22,7 @@ resource "aws_instance" "practice" {
       "sudo yum install ansible -y",
       "sudo yum install git -y",
       "echo localhost>/tmp/hosts",
-      "ansible-pull -i /tmp/hosts -U https://github.com/naveenthangella/Practice/blob/master/Ansible/playbooks/main.yml"
+      "ansible-pull -i /tmp/hosts -U https://github.com/naveenthangella/Practice.git Ansible/playbooks/main.yml"
 
     ]
   }
