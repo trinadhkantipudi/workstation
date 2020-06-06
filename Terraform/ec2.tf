@@ -21,6 +21,7 @@ resource "aws_instance" "practice" {
       "sudo yum install epel-release -y",
       "sudo yum install ansible -y",
       "sudo yum install git -y",
+      "sudo yum install unzip -y",
       "echo localhost>/tmp/hosts",
       "ansible-pull -i /tmp/hosts -U https://github.com/naveenthangella/Practice.git Ansible/playbooks/main.yml"
 
