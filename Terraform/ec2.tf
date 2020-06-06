@@ -48,6 +48,6 @@ data "aws_security_group" "sg" {
 data "aws_security_group" "sg1" {
   filter {
     name = "description"
-    values = ["allows web"]
+    values = ["allow web"]
   }
 }
